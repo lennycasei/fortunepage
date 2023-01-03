@@ -146,7 +146,8 @@ flex-wrap: wrap;
     background-color: rgb(234, 202, 255);  
     text-align: center;
     padding: 5px;
-    margin-top: 0px;
+    position:static;
+    margin-top: auto;
     
 
 }
@@ -187,6 +188,7 @@ flex-wrap: wrap;
                         "main   main   main   main"
                         "footer footer footer footer";
     font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100%;
 }
 nav{
     grid-area: nav;
@@ -270,6 +272,7 @@ aside{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 
 }
 .barranav > .fa-bars{
@@ -321,7 +324,16 @@ aside{
         background: rgb(0,18,36);
 background: linear-gradient(90deg, rgba(0,18,36,1) 0%, rgba(178,190,209,1) 19%, rgba(168,201,193,1) 35%, rgba(164,127,208,1) 51%, rgba(139,120,138,1) 65%, rgba(206,213,236,1) 80%, rgba(178,223,232,1) 100%);
     }
+ .redes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+ }       
         
-        
+ html{
+    height: 100%;
+ }
      
 
