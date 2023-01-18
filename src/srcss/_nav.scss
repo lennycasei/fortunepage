@@ -1,0 +1,74 @@
+.barranav{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(96, 7, 7, 0.107);
+    position: static;
+    top: 0%;
+    padding: 20px;
+    
+
+ ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+        
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+}
+ul li{
+position: relative;
+}
+ ul  li:hover ul{
+    max-height: 300px;
+    transition: 0,5s;
+}
+ ul li ul{
+    position: absolute;
+    left: 10px;
+    list-style: none;
+    background-color:rgba(96, 7, 7, 0.107);
+    max-height: 0;
+    overflow: hidden;
+}
+.barranav__links{
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+    
+}
+}
+@media(max-width:600px){
+    .barranav .fa-bars{
+        display: block;
+        color: white;
+        font-size: 30px;
+        position: fixed;
+    }
+    .barranav ul{
+        position: fixed;
+        flex-direction: column;
+        background-color:darkgrey;
+        width: 250px;
+        height: 100vh;
+        justify-content: start;   
+        padding-top: 30px;
+        align-items: flex-start;
+        left: -300px;
+        transition: 0,2s;
+    }
+   
+    }
+    .barranav > .fa-bars:hover + ul{
+        left: 0;
+    }
+    .barranav > ul:hover{
+        left: 0;
+    }

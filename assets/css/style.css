@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,600;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.barranav {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(96, 7, 7, 0.107);
+  position: static;
+  top: 0%;
+  padding: 20px;
+}
+.barranav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.barranav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+}
+.barranav ul li {
+  position: relative;
+}
+.barranav ul li:hover ul {
+  max-height: 300px;
+  transition: 0, 5s;
+}
+.barranav ul li ul {
+  position: absolute;
+  left: 10px;
+  list-style: none;
+  background-color: rgba(96, 7, 7, 0.107);
+  max-height: 0;
+  overflow: hidden;
+}
+.barranav .barranav__links {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .barranav .fa-bars {
+    display: block;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+  }
+  .barranav ul {
+    position: fixed;
+    flex-direction: column;
+    background-color: darkgrey;
+    width: 250px;
+    height: 100vh;
+    justify-content: start;
+    padding-top: 30px;
+    align-items: flex-start;
+    left: -300px;
+    transition: 0, 2s;
+  }
+}
+.barranav > .fa-bars:hover + ul {
+  left: 0;
+}
+
+.barranav > ul:hover {
+  left: 0;
+}
+
+.cajapadre1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  width: 400px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid 2px;
+  border-color: rgb(222, 155, 155);
+}
+
+.tarjeta__img {
+  width: 100%;
+  padding: 2px;
+  margin: 5px 2px 5px 2px;
+}
+
+.tarjeta__titulo {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.tarjeta__desc {
+  margin: 10px;
+}
+
+.tarjeta__btn {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(106, 21, 225);
+  border: none;
+  color: white;
+}
+
+.headerIndex {
+  width: 100%;
+  height: 300px;
+  background-image: url(../../assets/img/olas.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerIndex_info {
+  color: rgb(3, 3, 3);
+}
+
+.piedep {
+  width: 100%;
+  background-color: rgb(234, 202, 255);
+  text-align: center;
+  padding: 5px;
+  position: static;
+  margin-top: auto;
+}
+.piedep > .redes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tituloprincipal {
+  padding: 15px;
+  margin: 7px;
+}
+
+.titulosec {
+  padding: 2px;
+  margin: 15px 20px 15px 20px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.piedep {
+  width: 100%;
+  background-color: rgb(234, 202, 255);
+  text-align: center;
+  padding: 5px;
+  position: static;
+  margin-top: auto;
+}
+
+.parraf {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+}
+
+.mail {
+  margin: 15px;
+  padding: 10px;
+}
+
+.inicio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inicio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-content: end;
+}
+
+.fondogrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px 300px 1fr 100px;
+  grid-template-areas: "nav nav nav nav" "header header header header" "main   main   main   main" "footer footer footer footer";
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100%;
+}
+
+nav {
+  grid-area: nav;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas: "titulo titulo" "nombyap mail" "tel    usuario" "contra  contra" "btn     btn";
+  background-color: rgb(242, 223, 197);
+  padding: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.formulario h2:nth-child(1) {
+  grid-area: titulo;
+}
+
+.formulario label:nth-child(2) {
+  grid-area: nombyap;
+}
+
+.formulario label:nth-child(3) {
+  grid-area: mail;
+}
+
+.formulario label:nth-child(4) {
+  grid-area: tel;
+}
+
+.formulario label:nth-child(5) {
+  grid-area: usuario;
+}
+
+.formulario label:nth-child(6) {
+  grid-area: contra;
+}
+
+.formulario label:nth-child(7) {
+  grid-area: btn;
+}
+
+.formulario > label {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario > label > input {
+  background-color: transparent;
+}
+
+.btn {
+  padding: 5px;
+  border-radius: 6px;
+  background-color: darkseagreen;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .formulario_inicio {
+    flex-direction: column;
+  }
+}
+.formulario_inicio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .barranav .fa-bars {
+    display: block;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+  }
+}
+.contacta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contacta__img {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  justify-content: start;
+}
+
+.gradient {
+  background: rgb(0, 18, 36);
+  background: linear-gradient(90deg, rgb(0, 18, 36) 0%, rgb(178, 190, 209) 19%, rgb(168, 201, 193) 35%, rgb(164, 127, 208) 51%, rgb(139, 120, 138) 65%, rgb(206, 213, 236) 80%, rgb(178, 223, 232) 100%);
+}
+
+html {
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
